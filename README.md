@@ -20,17 +20,23 @@ To run this task, uncomment the following line in `PCA.py`:
 ```
 
 After running the script, the following results will be displayed:
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <div style="margin: 5px;">
-        <img src="Result\1-1 PCA Reduce to 2D.png" alt="1-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <img src="Result\1-2 PCA Reduce to 3D.png" alt="1-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <p style="text-align: center; font-style: italic;">PCA 2D/3D Projection</p>    
+<div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 15px; width: 100%; max-width: 1000px;">
+        <div style="flex: 1 0 48%; box-sizing: border-box;">
+            <img src="Result/1-1 PCA Reduce to 2D.png" alt="1-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+        </div>
+        <div style="flex: 1 0 48%; box-sizing: border-box;">
+            <img src="Result/1-2 PCA Reduce to 3D.png" alt="1-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+        </div>
     </div>
-    <div style="margin: 5px;">
-        <img src="Result\1-3 PCA 3 Eigenfaces.png" alt="1-3" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <p style="text-align: center; font-style: italic;">3 Eigenfaces in PCA_3D</p> 
+    <div style="flex: 1 0 100%; display: flex; justify-content: center; box-sizing: border-box;margin-top: 15px;">
+        <div style="width: 100%; max-width: 500px;">
+            <img src="Result/1-3 PCA 3 Eigenfaces.png" alt="1-3" style="width: 100%; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+            <p style="text-align: center; font-style: italic; margin-top: 10px;">3 Eigenfaces in PCA_3D</p>
+        </div>
     </div>
 </div>
+
 
 After dimensionality reduction, PCA is applied to reduce the face images to 40, 80, and 200 components, followed by classification of test images using the nearest neighbor rule. Here are the results:
 
@@ -44,11 +50,12 @@ After dimensionality reduction, PCA is applied to reduce the face images to 40, 
 ### Task 2: LDA for Dimensionality Reduction
 Run the `LDA.py` script to visualize the distribution of the sampled data (similar to PCA) after reducing dimensionality to 2 and 3 components.
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <div style="margin: 5px;">
-        <img src="Result\2-1 LDA Reduce to 2D.png" alt="2-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <img src="Result\2-2 LDA Reduce to 3D.png" alt="2-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <p style="text-align: center; font-style: italic;">LDA 2D/3D Projection</p>    
+<div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 15px;">
+    <div style="flex: 1 0 48%; box-sizing: border-box; margin: 5px;">
+        <img src="Result/2-1 LDA Reduce to 2D.png" alt="2-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+    </div>
+    <div style="flex: 1 0 48%; box-sizing: border-box; margin: 5px;">
+        <img src="Result/2-2 LDA Reduce to 3D.png" alt="2-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
     </div>
 </div>
 
@@ -66,20 +73,20 @@ In this task, GMM models with 3 Gaussian components are trained using both raw f
 
 To run the task, execute the `GMM.py` script. The following results will be generated:
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <div style="margin: 5px;">
-        <img src="Result\3-1 GMM Clustering on Raw Data.png" alt="3-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <img src="Result\3-2 Face Images Grouped from Raw Data.png" alt="3-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+    <div style="flex: 1 0 45%; box-sizing: border-box; margin: 5px;">
+        <img src="Result/3-1 GMM Clustering on Raw Data.png" alt="3-1" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+        <img src="Result/3-2 Face Images Grouped from Raw Data.png" alt="3-2" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
         <p style="text-align: center; font-style: italic;">Raw Data</p>
     </div>
-    <div style="margin: 5px;">
-        <img src="Result\3-3 GMM Clustering with 200 PCA Components.png" alt="3-3" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <img src="Result\3-4 Face Images Grouped from 200 PCA Components.png" alt="3-4" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+    <div style="flex: 1 0 45%; box-sizing: border-box; margin: 5px;">
+        <img src="Result/3-3 GMM Clustering with 200 PCA Components.png" alt="3-3" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+        <img src="Result/3-4 Face Images Grouped from 200 PCA Components.png" alt="3-4" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
         <p style="text-align: center; font-style: italic;">PCA 200</p>
     </div>
-    <div style="margin: 5px;">
-        <img src="Result\3-5 GMM Clustering with 80 PCA Components.png" alt="3-5" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
-        <img src="Result\3-6 Face Images Grouped from 80 PCA Components.png" alt="3-6" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+    <div style="flex: 1 0 45%; box-sizing: border-box; margin: 5px;">
+        <img src="Result/3-5 GMM Clustering with 80 PCA Components.png" alt="3-5" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
+        <img src="Result/3-6 Face Images Grouped from 80 PCA Components.png" alt="3-6" style="width: 100%; max-width: 500px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);"/>
         <p style="text-align: center; font-style: italic;">PCA 80</p>
     </div>
 </div>
@@ -106,6 +113,7 @@ Evaluation of SVM on different datasets:
     PCA 80 Accuracies: {0.01: 99.0023023791251, 0.1: 99.0023023791251, 1: 99.0023023791251}
     Evaluating SVM on PCA-reduced data (200 components):
     PCA 200 Accuracies: {0.01: 99.23254029163469, 0.1: 99.23254029163469, 1: 99.23254029163469}
+
 
 ### Task 5: CNN for Classification (Optional)
 This task involves implementing a Convolutional Neural Network (CNN) for classification.
